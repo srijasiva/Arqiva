@@ -77,4 +77,4 @@ class ArqivaWebsiteTests(unittest.TestCase):
         cls.driver.quit()
 
 if __name__ == '__main__':
-    unittest.main(testRunner=html_testRunner.HTMLTestRunner(output='results'), testRunner=xmlrunner.XMLTestRunner(output='results'))
+    unittest.main(testRunner=html_testRunner.HTMLTestRunner(output='results'))
