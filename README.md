@@ -7,6 +7,8 @@ This project contains automated tests for the Arqiva website using Selenium and 
 - Python 3.11
 - Selenium
 - WebDriver for the browser you are testing (e.g., ChromeDriver for Google Chrome)
+- `unittest-xml-reporting` for XML reports
+- `html-testRunner` for HTML reports
 
 ## Installation
 
@@ -18,13 +20,14 @@ This project contains automated tests for the Arqiva website using Selenium and 
 
 2. Install the required Python packages:
     ```sh
-    pip install selenium
+    pip install selenium unittest-xml-reporting html-testRunner
     ```
 
 3. Download the WebDriver for your browser and ensure it is in your system's PATH.
 
 ## Running the Tests
 
-To run the tests, execute the following command:
+To run the tests and generate `output.xml` and `results.html/log.html`, execute the following command:
 ```sh
 python arqiva_website_tests.py
+```
