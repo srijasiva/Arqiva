@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
 import os
-
+import HtmlTestRunner
 
 class ArqivaWebsiteTests(unittest.TestCase):
     @classmethod
@@ -73,6 +73,5 @@ class ArqivaWebsiteTests(unittest.TestCase):
     def tearDownClass(cls):
         cls.driver.quit()
 
-
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='results'))
