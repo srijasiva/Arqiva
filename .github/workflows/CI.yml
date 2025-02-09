@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install selenium unittest-xml-reporting HtmlTestRunner chromedriver-autoinstaller
+        pip install selenium unittest-xml-reporting html_testRunner chromedriver-autoinstaller
 
     - name: Run tests
       run: |
