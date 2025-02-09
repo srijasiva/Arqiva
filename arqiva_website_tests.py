@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
 import os
 import xmlrunner
-import html_testRunner
+#import html_testRunner
 import chromedriver_autoinstaller
 
 class ArqivaWebsiteTests(unittest.TestCase):
