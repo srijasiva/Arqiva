@@ -14,7 +14,7 @@ class ArqivaWebsiteTests(unittest.TestCase):
     def setUpClass(cls):
         chromedriver_autoinstaller.install()  # Automatically install the correct version of ChromeDriver
         options = webdriver.ChromeOptions()
-        options.add_argument("--user-data-dir=/tmp/chrome_user_data")
+        #options.add_argument("--user-data-dir=/tmp/chrome_user_data")
         cls.driver = webdriver.Chrome(options=options)
         cls.driver.get("http://www.arqiva.com")
         cls.driver.maximize_window()
