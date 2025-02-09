@@ -76,5 +76,7 @@ class ArqivaWebsiteTests(unittest.TestCase):
     def tearDownClass(cls):
         cls.driver.quit()
 
+if __name__ == '__main__':
+    unittest.main()
 #if __name__ == '__main__':
 #    unittest.main(testRunner=html_testRunner.HTMLTestRunner(output='results'))
