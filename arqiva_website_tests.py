@@ -5,11 +5,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
 import os
-import HtmlTestRunner
+import xmlrunner
+import html_testRunner
+import chromedriver_autoinstaller
 
 class ArqivaWebsiteTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        chromedriver_autoinstaller.install()  # Automatically install the correct version of ChromeDriver
         cls.driver = webdriver.Chrome()
         cls.driver.get("http://www.arqiva.com")
         cls.driver.maximize_window()
@@ -74,4 +77,4 @@ class ArqivaWebsiteTests(unittest.TestCase):
         cls.driver.quit()
 
 if __name__ == '__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='results'))
+    unittest.main(testRunner=html_testRunner.HTMLTestRunner(output='results'), testRunner=xmlrunner.XMLTestRunner(output='results'))
