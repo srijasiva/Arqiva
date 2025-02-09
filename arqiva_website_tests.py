@@ -57,6 +57,7 @@ class ArqivaWebsiteTests(unittest.TestCase):
             self.driver.find_element(By.XPATH, f"//button[contains(text(), '{tab}')]").click()
             self.assertTrue(self.is_element_present(By.XPATH, f"//*[text()='{sub_tab}']"))
             self.driver.find_element(By.XPATH, f"//a[contains(text(), '{sub_tab}')]").click()
+            WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, f"//*[contains(text(), '{expected_text}')]")))
             self.assertTrue(self.is_element_present(By.XPATH, f"//h1[contains(text(), '{expected_text}')]"))
             self.driver.save_screenshot(f'screenshots/{tab}_{sub_tab}.png')
 
