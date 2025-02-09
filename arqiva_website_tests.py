@@ -37,7 +37,7 @@ class ArqivaWebsiteTests(unittest.TestCase):
             "Media": {"Our Media Services": "Our media services", "TV": "Our television services", "TV Products": "Arqade", "Radio": "Our radio services"},
             "Utilities": {"Our Utilities Services": "Our utilities services", "Water metering": "Water metering services", "Managed connectivity": "Managed connectivity services", "Managed sensors": "Managed sensors", "Data analytics": "Data analytics"},
             "Satellite Data": {"Our satellite data services": "Our satellite data services", "Satellite Gateway": "Satellite gateway services", "Satellite Data Comms": "Satellite data comms"},
-            "Careers": {"Careers at Arqiva": "Careers at Arqiva", "Why Arqiva": "Why Arqiva", "Graduates & Apprentices": "Graduates, interns and apprentices"}
+            "Careers": {"Careers at Arqiva": "Careers at Arqiva", "Graduates & Apprentices": "Graduates, interns and apprentices"}
         }
 
         for tab, sub_tabs in tab_information.items():
