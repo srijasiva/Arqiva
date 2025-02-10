@@ -4,9 +4,9 @@ This repository contains the necessary files and configurations to perform API t
 
 ## Prerequisites
 
-- [Python](https://www.python.org/downloads/)
-- [Locust](https://locust.io/)
-- [Node.js](https://nodejs.org/)
+* Python 3.x (https://www.python.org/downloads/)
+* Locust (https://locust.io/)
+* Node.js (https://nodejs.org/)
 
 ## Makefile
 
@@ -18,31 +18,40 @@ To install all necessary dependencies, run:
 
 ```sh
 make install
+```
 
-Run API Automation Tests
+### Run API Automation Tests
+
 To execute the API automation tests using Locust, run:
 
 ```sh
 make run-api-automation
+```
 
 This will generate multiple HTML reports for different API tests.
 
-Clean Up
+### Clean Up
+
 To clean up non-version controlled directories, run:
 
 ```sh
 make clean
+```
 
-GitHub Actions Workflow
-The GitHub Actions workflow is defined in the api-automation-template.yaml file. It automates the process of setting up the environment, running the tests, and uploading the test reports as artifacts.
+### GitHub Actions Workflow
 
-Workflow Steps
-Set up Python: Installs the specified Python version.
-Install Locust: Installs Locust and its plugins.
-Run API Automation Tests: Executes the API tests defined in the Makefile.
-Upload Test Reports: Uploads the generated HTML reports as artifacts.
-Example Workflow Configuration
+The GitHub Actions workflow is defined in the `api-automation-template.yaml` file. It automates the process of setting up the environment, running the tests, and uploading the test reports as artifacts.
 
+### Workflow Steps
+
+1. Set up Python: Installs the specified Python version.
+2. Install Locust: Installs Locust and its plugins.
+3. Run API Automation Tests: Executes the API tests defined in the Makefile.
+4. Upload Test Reports: Uploads the generated HTML reports as artifacts.
+
+### Example Workflow Configuration
+
+```yaml
 name: API Automation
 
 on:
@@ -87,17 +96,32 @@ jobs:
         with:
           name: Arqiva_reports
           path: Arqiva_*_report*.html
+```
 
-Running Locally
+### Running Locally
+
 To run the tests locally, ensure you have all the prerequisites installed and then execute the following commands:
 
-Install dependencies:
+1. Install dependencies:
 
-Run the API automation tests:
+```sh
+pip install -r requirements.txt
+```
+
+2. Run the API automation tests:
+
+```sh
+python arqiva_website_tests.py
+```
 
 Check the generated HTML reports in the project directory.
 
-Cleaning Up
+### Cleaning Up
+
 To clean up the project directory, run:
+
+```sh
+git clean -fdx
+```
 
 This will remove all non-version controlled directories and files.
